@@ -7,7 +7,9 @@ Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
+# Source0-md5:	9e138c13fbce6357c0afcad631f2d98a
 Source1:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
+# Source1-md5:	7b81def4f121c951c26735b9b6508962
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools.html
 BuildRequires:	pcsc-lite-devel
 BuildRequires:	perl-PCSC
