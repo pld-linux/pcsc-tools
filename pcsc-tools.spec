@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	gtk	# don't build GTK tools
+%bcond_without	gtk	# don't build GTK+ tools
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Some tools to be used with smart cards and PC/SC
