@@ -7,6 +7,7 @@ Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
+Source1:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools.html
 BuildRequires:	pcsc-lite-devel
 BuildRequires:	perl-PCSC
@@ -33,6 +34,13 @@ Narzêdzia dla czytników Smart Card i PC/SC z GUI w GTK+.
 
 %prep
 %setup -q
+
+# paranoid check whether smartcard_list.txt in _sourcedir isn't too old
+if [ "`wc -l < %{SOURCE1}`" -lt "`wc -l < smartcard_list.txt`" ] ; then
+	echo "smartcard_list.txt needs to be updated"
+	exit 1
+fi
+cp -f %{SOURCE1} .
 
 %build
 %{__make} \
