@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	gtk	# don't build GTK tools
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl):	Narzêdzia do u¿ywania z czytnikami Smart Card i PC/SC
@@ -12,7 +16,7 @@ Source1:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 BuildRequires:	pcsc-lite-devel
 BuildRequires:	perl-PCSC >= 1.2.0
-BuildRequires:	perl-gtk
+%{?with_gtk:BuildRequires:	perl-gtk}
 BuildRequires:	rpm-perlprov
 Requires:	perl-PCSC >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -74,7 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/pcsc_scan.1*
 %{_mandir}/man1/scriptor.1*
 
+%if %{with gtk}
 %files gtk
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gscriptor
 %{_mandir}/man1/gscriptor.1*
+%endif
