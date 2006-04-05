@@ -107,6 +107,9 @@
 3B 1F 11 00 6A 01 38 46 49 53 45 10 8C 02 FF 07 90 00
 	GSM-SIM Saunalahti (from 2004)
 
+3B 1F 11 00 6A 31 36 46 49 53 45 13 8C 02 FF 07 90 00
+	GSM-SIM card - Telenor Mobil - http://www.telenor.com/
+
 3B 1F 11 80 6A 16 32 46 49 53 45 15 8C E6 FF 07 90 00
 	GSM SIM card - Tele2 Estonia - http://www.tele2.ee
 
@@ -238,6 +241,9 @@
 3B 3F 94 00 80 69 AF 03 07 06 67 09 97 0A 0E 83 3E 9F 16
 	BASE SIM - Belgium (Gemplus)
 
+3B 3F 94 00 80 69 AF 03 0F 02 80 FF FF 06 0E 83 3E 9F 16
+	GSM-SIM Telefonica Movistar, prepaid (Spain)
+
 3B 3F 95 00 80 65 AF 03 12 01 6F 73 32 21 1B 83 00 90 00
 	Gemplus GemXpresso PRO 64 PK SIM
 
@@ -363,6 +369,9 @@
 3B 6D 00 00 00 31 C0 71 D6 64 38 D0 03 00 84 90 00
 	HSBC Visa/MasterCard credit card
 	Barclay Card MasterCard
+
+3B 6D 00 00 00 31 C0 71 D6 64 58 D7 01 00 84 90 00
+	UK Nationwide Bank Visa Delta
 
 3B 6D 00 00 80 31 80 65 B0 06 01 01 77 83 00 90 00
 	GemXpresso Lite: with EMV application
@@ -623,6 +632,9 @@
 
 3B 9F 95 80 1F C3 80 31 E0 73 FE 21 1B B3 E2 01 74 83 0F 90 00 88
 	Gemplus GemXplore 3G USIM
+
+3B 9F 95 80 1F C7 80 31 E0 73 FE 21 1B 63 E2 04 A5 83 0F 90 00 88
+	Cingular "64Ksmartchip" GSM SIM
 
 3B 9F 96 80 1F C3 80 31 E0 73 FE 21 1B B3 E2 02 7E 83 0F 90 00 82
 	Vodafone SIM Card (D2, 1800Mhz, Germany, Twincard, possibly others too?), manufactured by Gemplus (See stamp on the chip)
@@ -956,6 +968,10 @@
 3B FA 94 00 00 81 31 20 43 80 65 A2 01 01 01 3D 72 D6 43 21
 	GemXpresso Pro R3 32PK (MPCOS, T=1)
 
+3B FA 98 00 FF C1 10 31 FE 55 C8 03 53 41 47 5F 50 4B 49 32 77
+	Siemens corporate ID card (access to the building / rooms etc,
+	stores PKI private keys/certificates)
+
 3B FB 13 00 FF 81 31 80 75 5A 43 36 2E 35 20 52 45 56 20 43 64
 	ZeitControl BasicCard 6.5, multiapplication with 30 kByte EEPROM
 
@@ -999,6 +1015,9 @@
 
 3B FF 11 00 02 40 64 80 69 A2 07 01 03 57 00 00 FF 00 83 00 90 00
 	Gemplus GemXpresso
+
+3B FF 13 00 00 81 31 FE 4D 80 25 A0 00 00 00 56 57 44 4B 33 33 30 06 00 D2
+	Datakey DCOS model 330 (DKCCOS 6.0 token)
 
 3B FF 13 00 FF 81 31 FE 45 65 63 11 04 50 02 80 00 08 54 00 04 23 05 02 A5
 	Maestrocard/Geldkarte (Stadtsparkasse Haltern, Germany)
