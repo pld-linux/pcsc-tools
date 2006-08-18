@@ -6,12 +6,12 @@
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl):	Narzêdzia do u¿ywania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
-Version:	1.4.5
-Release:	2
+Version:	1.4.6
+Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
-# Source0-md5:	706a6e3bcac08d62c44fb2cd1d561969
+# Source0-md5:	8210a13a6fbe320620cd4281f5d0531d
 # broken builder script, original url:
 # http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 Source1:	smartcard_list.txt
