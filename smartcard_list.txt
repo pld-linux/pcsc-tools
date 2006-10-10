@@ -280,7 +280,7 @@
 	Setec SetCOS 5.1.0 EMV
 
 3B 64 00 FF 80 62 02 A2
-	VISA credit card
+	VISA credit card (Nordea bank)
 
 3B 64 .. FF 80 62 .. A2
 	JCOP20
@@ -435,14 +435,20 @@
 3B 6E 00 00 00 62 00 00 57 41 56 41 4E 54 10 81 90 00
 	Setec SetCOS 5.1.0 EMV + AVANT
 
+3B 6E 00 00 45 73 74 45 49 44 20 76 65 72 20 31 2E 30
+	Estonian Identity Card (EstEID v1.5 multos)
+
 3B 6E 00 00 80 31 80 65 B0 03 01 01 5E 83 00 00 90 00
 	FirstUSA Visa
 
 3B 6E 00 00 80 31 80 65 B0 03 02 01 5E 83 00 00 90 00
 	Gemplus GemXpresso 211is
 
+3B 6E 00 FF 00 62 00 00 57 41 56 41 4E 54 10 81 90 00
+	debit card (Visa Electron) issued by Nordea bank
+
 3B 6E 00 FF 45 73 74 45 49 44 20 76 65 72 20 31 2E 30
-	Estonian Identity Card (EstEID warm)
+	Estonian Identity Card (EstEID v1.0 warm)
 
 3B 6F 00 00 00 67 2. 43 46 49 53 45 12 52 66 FF 81 90 00
 	Setec SetCOS 4.3.2
@@ -467,6 +473,12 @@
 
 3B 6F 00 00 80 5A 0A 01 03 20 03 11 24 34 A3 C7 82 90 00
 	Navigo Imagine R ((French metro in Paris)
+
+3B 6F 00 00 80 5A 08 03 04 00 02 00 23 65 4A 4C 82 90 00
+	RATP NaviGo Travel Card pass from Ile-de-France
+
+3B 6F 00 FF 52 53 41 53 65 63 75 72 49 44 28 52 29 31 30
+	RSA SecurID SID800 token
 
 3B 6F 00 FF 53 46 53 45 2D 43 58 33 32 32 2D 56 18 02 02
 	Giesecke & Devrient SmartCafe Expert 2.0
@@ -502,6 +514,9 @@
 3B 7B .. 00 00 80 62 0. 51 56 46 69 6E 45 49 44
 	Setec SetCOS 5.1.0
 
+3B 7B 94 00 00 80 62 11 51 56 46 69 6E 45 49 44
+	Finnish Electronic ID card (fineid card www.fineid.fi)
+
 3B 7B 94 00 00 80 65 B0 83 01 0[1,3] 74 83 00 90 00
 	Gemplus GemXpresso Pro R3 (E64 PK)
 
@@ -526,6 +541,9 @@
 
 3B 7D 94 00 00 80 31 80 65 B0 83 01 01 90 83 00 90 00
 	GemSafeXpresso 16k R3.2
+
+3B 7D 94 00 00 80 31 80 65 B0 83 02 04 7E 83 00 90 00
+	GXP Pro R3.2 64K, GemSafe applet MPCOS v1.11
 
 3B 7E 11 00 00 00 6A 11 63 54 08 30 24 01 .. .. 21 90 01
 	Sagem Windows for smart cards
@@ -651,6 +669,9 @@
 
 3B 99 94 00 91 99 93 12 00 01 16 02 00
 	ORGA test systems - GSM Phase 2+ Test SIM
+
+3B 9A 96 00 92 03 49 93 16 00 01 21 01 00
+	GSM-SIM card of the Austrian provider Yesss! (http://www.yesss.at)
 
 3B 9B 95 80 1F 47 80 31 A0 73 BE 21 00 53 34 99 05 D0
 	GSM-SIM EMT "Diil", prepaid (Estonia)
@@ -928,6 +949,9 @@
 	Electronic Identification Card from the FNMT, the Spanish Official
 	Certification Authority
 
+3B EF 00 00 81 31 FC 45 80 31 80 65 11 01 13 00 01 53 41 43 45 81 04 21
+	Slovenska sporitelna (SLSP) Bank card, Maestro Card with chip
+
 3B EF 00 FF 81 31 20 45 42 61 73 69 63 43 61 72 64 20 5A 43 32 2E 33 BD
 	ZeitControl BasicCard Enhanced 2.3
 
@@ -1014,6 +1038,9 @@
 3B F5 91 00 FF 91 81 71 FE 40 00 41 08 00 00 00 0D
 	Contactless Mifare
 
+3B F5 91 00 FF 91 81 71 FE 40 00 41 18 00 00 00 1D
+	Contactless Mifare 4k
+
 3B F5 91 00 FF 91 81 71 FE 40 00 41 88 00 00 00 8D
 	Contactless Mifare 1k or 4k
 
@@ -1079,7 +1106,7 @@
 	Philips SmartMX chip (IBMs JCOP OS)
 
 3B FE 94 00 FF 80 B1 FA 45 1F 03 45 73 74 45 49 44 20 76 65 72 20 31 2E 30 43
-	ESTEID Estonian Identity Card (EstEID cold)
+	Estonian Identity Card (EstEID v1.0 cold)
 
 3B FF 11 00 00 81 31 FE 4D 80 25 A0 00 00 00 56 57 44 4B 33 33 30 06 00 D0
 	Datakey 32K PKI Smart Card Model 330
@@ -1125,8 +1152,17 @@
 3B FF 18 00 FF 81 31 FE 45 65 63 0D 04 50 02 80 00 08 90 09 70 00 05 00 2A
 	Landesbank baden-Württemberg Geldkarte
 
+3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 05 28 00 0D 90 81 06 00 06 15 58
+	Geldkarte/HBCI (Frankfurter Sparkasse, Germany)
+
 3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 58 45 00 06 15 8C
 	Stadtsparkasse München electronic cash card / Geldkarte
+
+3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 74 32 00 06 15 D7
+	German HBCI-Banking Card with 'Geldkarte' from the bank "Sparkasse Marburg-Biedenkopf"
+
+3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 92 61 00 06 15 62
+	Geldkarte (Frankfurter Sparkasse, Germany)
 
 3B FF 18 00 FF 81 31 FE 45 65 63 11 06 40 02 50 00 10 05 50 03 10 05 00 43
 	HBCI-Karte (Bordesholmer Sparkasse, Germany)
@@ -1137,8 +1173,14 @@
 3B FF 18 00 FF 81 31 FE 45 65 63 11 06 40 02 50 00 10 27 80 03 25 05 00 84
 	Volksbank VR-BankCard (GeldKarte)
 
+3B FF 18 00 FF 81 31 FE 45 65 63 11 06 62 02 80 00 11 06 60 03 04 06 13 87
+	Geldkarte (Volksbank Offenburg, Germany)
+
 3B FF 18 00 FF 81 31 FE 45 65 63 11 06 62 02 80 00 11 16 50 05 17 06 13 B2
 	FinTS (BBBank Karlsruhe, Germany)
+
+3B FF 18 00 FF 81 31 FE 45 65 63 11 08 43 02 50 00 10 46 50 01 08 05 30 27
+	HBCI-Karte (Sparkasse Altmark-West, Salzwedel, Germany)
 
 3B FF 18 00 FF 81 31 FE 45 65 63 1A 01 41 02 50 00 10 52 09 05 67 05 10 21
 	Maestro/Geldkarte (BBBank Karlsruhe, Germany)
