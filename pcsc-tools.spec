@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Some tools to be used with smart cards and PC/SC
-Summary(pl):	Narzêdzia do u¿ywania z czytnikami Smart Card i PC/SC
+Summary(pl.UTF-8):   NarzÄ™dzia do uÅ¼ywania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
 Version:	1.4.8
 Release:	1
@@ -27,19 +27,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Some tools to be used with smart cards and PC/SC.
 
-%description -l pl
-Narzêdzia do u¿ywania z czytnikami Smart Card i PC/SC.
+%description -l pl.UTF-8
+NarzÄ™dzia do uÅ¼ywania z czytnikami Smart Card i PC/SC.
 
 %package gtk
 Summary:	Some tools for smart cards and PC/SC with GTK+ GUI
-Summary(pl):	Narzêdzia dla czytników Smart Card i PC/SC z GUI w GTK+
+Summary(pl.UTF-8):   NarzÄ™dzia dla czytnikÃ³w Smart Card i PC/SC z GUI w GTK+
 Group:		X11/Applications
 
 %description gtk
 Some tools for smart cards and PC/SC with GTK+ GUI.
 
-%description gtk -l pl
-Narzêdzia dla czytników Smart Card i PC/SC z GUI w GTK+.
+%description gtk -l pl.UTF-8
+NarzÄ™dzia dla czytnikÃ³w Smart Card i PC/SC z GUI w GTK+.
 
 %prep
 %setup -q
