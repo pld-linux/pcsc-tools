@@ -300,8 +300,14 @@
 3B 3F 95 00 80 65 AF 03 14 01 8A 73 32 21 1B 83 0F 90 00
 	SIM Vodafone 64k
 
+3F 96 18 80 01 80 51 00 61 10 30 9F
+	Atmel/Athena T0 Inverse Convention PC/SC Compliance Test Card No. 2
+
 3B 3F 95 00 80 69 AF 03 0F 02 80 FF FF 06 0E 83 3E 9F 16
 	AT&T Wireless GSM SIM Card
+
+3B 57 18 02 93 02 01 01 01 90 00
+	 Easyflex FastOS 2.0 / Schlumberger
 
 3B 63 00 00 36 41 80
 	Schlumberger Payflex 4k User
@@ -327,6 +333,9 @@
 
 3B 65 00 00 9C 1[0,1] 01 01 03
 	Schlumberger Cyberflex Palmera
+
+3B 66 00 00 31 4B 01 01 00 80
+	VISA credit card (Skandiabanken)
 
 3B 66 00 FF 4A 43 4F 50 30 33
 	IBM JCOP 30
@@ -505,6 +514,9 @@
 3B 6E 00 00 00 31 C0 71 D6 65 7D E4 01 11 A0 83 90 00
 	UK CapitalOne Platinum Mastercard
 
+3B 6E 00 00 00 31 C0 71 D6 65 A3 03 01 80 00 83 90 00
+	UK First Direct (HSBC) Maestro / Cirrus
+
 3B 6E 00 00 00 62 .. 43 57 41 56 41 4E 54 10 81 90 00
 	Setec SetCOS 4.3.0
 
@@ -634,6 +646,9 @@
 
 3B 7D 96 00 00 80 31 80 65 B0 83 11 40 AC 83 00 90 00
 	GemXpresso R4 64k
+
+3B 7D 96 00 00 80 31 80 65 B0 83 11 C0 A9 83 00 90 00
+	 Gemplus X-Presso Pro 64k
 
 3B 7E 11 00 00 00 6A 11 63 54 08 30 24 01 .. .. 21 90 01
 	Sagem Windows for smart cards
@@ -793,6 +808,9 @@
 
 3B 95 95 40 FF AE 01 03 00 00
 	Axalto - Cyberflex 64K
+
+3B 95 95 40 FF D0 00 1A 01 01
+	Cyberflex Access 64k (v3)
 
 3B 98 13 40 0A A5 03 01 01 01 AD 13 11
 	Belgium Electronic ID card
@@ -1019,11 +1037,17 @@
 3B D0 A8 FF 81 F1 FB 24 00 1F C3 F4
 	Philips DESFire SAM
 
+3B D6 18 00 80 B1 80 6D 1F 03 80 51 00 61 10 30 9E
+	Atmel/Athena T0 PC/SC Compliance Test Card No. 1
+
 3B D6 18 00 81 B1 80 7D 1F 03 80 51 00 61 10 30 8F
 	ASECard Crypto, http://www.athena-scs.com/product.asp?pid=8
 
 3B DB 11 FF 50 00 FF 00 00 00 00 00 00 00 07 92 16 03
 	NEC V-WAY64 v2.1
+
+3B DB 96 00 80 1F 03 00 31 C0 64 77 E3 03 00 82 90 00 C1
+	CAC (Common Access Card)
 
 3B DB 96 00 81 B1 FE 45 1F 03 80 F9 A0 00 00 03 08 00 00 10 00 18
 	Oberthur CS PIV End Point v1.08 FIPS201 Certified
@@ -1033,6 +1057,9 @@
 
 3B DE 18 FF C0 80 B1 FE 45 1F 03 45 73 74 45 49 44 20 76 65 72 20 31 2E 30 2B
 	Estonian Identity Card (EstEID v1.0 2006 cold)
+
+3B DF 18 00 81 31 FE 67 00 5C 49 43 4D D4 91 47 D2 76 00 00 38 33 00 58
+	Infineon SICRYPT Card Module D4 PC/SC Compliance Test Card
 
 3B E0 00 00 81 31 20 40 30
 	SmarTEC
@@ -1133,6 +1160,9 @@
 	FNMT-Ceres Siemens Infineon SLE 20
 	Fábrica Nacional de Moneda y Timbre
 
+3B EF 00 00 81 31 20 49 00 5C 50 43 54 10 27 F8 D2 76 00 00 38 33 00 4D
+	Infineon Technologies PC/SC Compliance Test Card V1.0
+
 3B EF 00 00 81 31 FC 45 80 31 80 65 11 01 13 00 01 53 41 43 45 81 04 21
 	Slovenska sporitelna (SLSP) Bank card, Maestro Card with chip
 
@@ -1222,6 +1252,9 @@
 
 3B F2 98 00 FF C1 10 31 FE 55 C8 04 12
 	CardOS M4.01a (SLE66CX322P)
+
+3B F4 18 00 FF 81 31 80 55 00 31 80 00 C7
+	Identity card of Italian Republic
 
 3B F5 91 00 FF 91 81 71 FE 40 00 41 00 00 00 00 05
 	Contactless Mifare Ultralight
@@ -1316,6 +1349,9 @@
 3B FD 18 00 00 80 31 FE 45 00 31 80 71 8E 64 52 D9 04 00 81 90 00 5B
 	Oberthur Card Systems, authentIC
 
+3B FD 94 00 00 81 31 20 43 80 31 80 65 B0 83 02 04 7E 83 00 90 00 B6
+	GXPPRo-R3.x STD PTS T=1
+
 3B FD 94 00 00 81 31 60 65 80 31 C0 69 4D 54 43 4F 53 73 01 01 11 E0
 	MTCOS Light, http://www.masktech.de/products/mtcoslight/index.html
 
@@ -1348,6 +1384,10 @@
 
 3B FF 13 00 FF 81 31 FE 5D 80 25 A0 00 00 00 56 57 44 4B 33 32 30 05 00 3F
 	Datakey DCOS model 320
+
+3B FF 18 00 00 81 31 FE 45 00 6B 04 05 01 00 01 11 01 43 4E 53 10 31 80 69
+	Sanitary Card of "Friuli Venezia Giulia" region (Italian Republic)
+	Carta Nazionale dei Servizi (Italia) http://cartaservizi.regione.fvg.it/
 
 3B FF 18 00 FF 80 31 FE 45 53 46 53 45 2D 43 58 33 32 32 2D 56 18 03 08 7C
 	Giesecke & Devrient Sm@rtCafé Expert 2.0
@@ -1389,6 +1429,9 @@
 3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 58 45 00 06 15 8C
 	Stadtsparkasse München electronic cash card / Geldkarte
 
+3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 73 07 00 06 15 E5
+	Sparkasse Acchen HBCI Geld Karte
+
 3B FF 18 00 FF 81 31 FE 45 65 63 0D 07 63 07 64 00 0D 90 74 32 00 06 15 D7
 	German HBCI-Banking Card with 'Geldkarte' from the bank "Sparkasse Marburg-Biedenkopf"
 
@@ -1426,6 +1469,12 @@
 3B FF 18 00 FF 81 31 FE 45 65 63 11 06 62 02 80 00 11 06 60 03 04 06 13 87
 	Geldkarte (Volksbank Offenburg, Germany)
 
+3B FF 18 00 FF 81 31 .. 45 65 63 .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+	Geldkarte (generic ATR)
+
+3B FF 18 00 FF 81 31 FE 45 65 63 11 06 62 02 80 00 11 20 90 03 09 06 13 5C
+	Geldkarte [ec, Maestro] (1822 direkt Frankfurter Sparkasse, Germany)
+
 3B FF 18 00 FF 81 31 FE 45 65 63 11 06 62 02 80 00 11 43 50 01 17 06 13 E3
 	EC-Card of Sparkasse Pforzheim Calw
 
@@ -1440,6 +1489,9 @@
 	it "S-Card" or "Sparkassen-Card". the banks name is "Stadtsparkasse
 	Duesseldorf" and is part of the "Sparkassen-Finanzgruppe" (a finance
 	group, network of local banks).
+
+3B FF 18 00 FF 81 31 FE 45 65 63 11 08 66 02 80 00 11 56 00 03 18 06 20 92
+	Geldkarte [ec, Maestro] (Sparkasse Langen-Seligenstadt, Germany)
 
 3B FF 18 00 FF 81 31 FE 45 65 63 1A 01 41 02 50 00 10 52 09 05 67 05 10 21
 	Maestro/Geldkarte (BBBank Karlsruhe, Germany)
@@ -1569,6 +1621,9 @@
 
 3F 6C 00 00 25 A0 30 89 76 00 00 04 01 0C 90 00
 	MCOS 24k EEPROM
+
+3F 6C 00 00 3C A0 30 9E 61 00 00 01 00 04 90 00
+	Gemplus - British Gas - Gascard
 
 3F 6C 00 00 3C A0 30 A7 58 00 00 01 01 8C 90 00
 	Rendezvous Series 7 (D2-Mac satellite TV card)
