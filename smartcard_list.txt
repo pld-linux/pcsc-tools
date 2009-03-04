@@ -1,6 +1,6 @@
 #
 #    smartcard_list.txt
-#    Copyright (C) 2002-2008  Ludovic Rousseau
+#    Copyright (C) 2002-2009  Ludovic Rousseau
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -54,6 +54,9 @@
 3B 04 92 23 10 91
 	Siemens SLE 4432/42 card
 
+3B 04 99 FF FF 20
+	used for parkimeters/Parkings in Madrid
+
 3B 04 A2 13 10 91
 	PM2P Chipkarte SLE 4442, Code FFFFFF
 	Bahn BKK (Deutsche Bahn AG - Insurance Company)
@@ -74,6 +77,12 @@
 
 3B 0A 20 62 0C 01 4F 53 45 99 14 AA
 	GSM-SIM BEN (1800MHz)
+
+3B 0F 00 65 46 53 05 16 05 71 DF 00 00 00 45 50 53
+	Feitian ePass3000, Feitian formatted
+
+3B 0F 00 65 46 53 05 16 05 71 DF 00 00 00 80 6A 82
+	Feitian ePass3000, OpenSC formatted
 
 3B 0F 80 6A 16 32 46 49 53 45 53 8C E0 FF 07 90 00
 	GSM-SIM Sonera (from 1998)
@@ -106,6 +115,9 @@
 3B 17 13 9C 12 02 01 01 07 40
 	Schlumberger Cyberflex Access Developer 32k
 
+3B 17 94 18 01 01 01 01 41 93
+	T-Mobile SIM card
+
 3B 17 94 18 01 01 02 01 41 49
 	white SFR SIM card
 
@@ -126,6 +138,9 @@
 
 3B 19 94 31 02 05 10 45 98 01 02 4E
 	GSM-SIM EMT (Estonia)
+
+3B 1C 94 43 48 49 50 44 52 49 56 45 30 30 31
+	SCM Chipdrive MyKey MasterKey 24k
 
 3B 1F 11 00 67 42 41 46 49 53 45 53 52 66 FF 81 90 00
 	Finnish student id card
@@ -188,6 +203,9 @@
 
 3B 26 00 00 26 40 00 90 00
 	Schlumberger, purse?
+
+3B 26 00 11 01 6D 03
+	OLD CajaMadrid Visa Cash, ID card for Universidad Autónoma de Madrid, Madrid (about 1998)
 
 3B 26 00 11 04 5C 03 90 00
 	Caixa Abierta (Barcelona, Spain) Cash/Visa Electron
@@ -277,6 +295,9 @@
 3B 37 11 00 46 4C 4F 4D 41 90 00
 	SLE 4428
 
+3B 37 13 00 80 62 11 04 82 90 00
+	Swiss UBS Maestro/CASH Bank Card 
+
 3B 3B .. 00 80 6. A[F,E] 03 0[C,D] .. .. 83 .. 90 00
 	GemXplore Xpresso V3
 
@@ -291,6 +312,9 @@
 
 3B 3B 94 00 67 37 10 00 00 39 60 33 33 90 00
 	Avea GSM / Turkey
+
+3B 3B 94 00 69 3C 10 30 01 3E 40 33 00 90 00
+	UK Vodafone GSM SIM
 
 3B 3B 94 00 80 65 AF 03 0D 01 74 83 0F 90 00
 	Gemplus GemXplore Xpresso V3 B1P
@@ -309,8 +333,14 @@
 3B 3D 94 00 01 0F 00 36 00 00 86 60 18 04 00 01 07
 	Vodafone GSM / Turkey
 
+3B 3D 94 00 24 0E 00 96 00 00 86 60 31 B5 00 06 07
+	GSM SIM Tele2 Estonia; 2008
+
 3B 3F 11 00 6F AF 65 03 12 01 80 73 32 21 1B 83 0F 90 00
 	GSM SIM card Orange J2RE postpaid
+
+3B 3F 94 00 80 65 AF 03 12 01 6F 73 32 21 1B 83 0F 90 00
+	GSM SIM Card (GEMPLUS), issued by Orange Switzerland (Prepaid)
 
 3B 3F 94 00 80 65 AF 03 12 01 79 73 32 21 1B 83 0F 90 00
 	UK O2 GSM SIM (2G Online Prepay Maldives)
@@ -336,6 +366,9 @@
 3B 3F 95 00 80 65 AF 03 12 01 6F 73 32 21 1B 83 00 90 00
 	Gemplus GemXpresso PRO 64 PK SIM
 
+3B 3F 95 00 80 65 AF 03 12 01 6F 73 32 21 1B 83 0F 90 00
+	Vodafone Italia SIM 64K
+
 3B 3F 95 00 80 65 AF 03 14 01 8A 73 32 21 1B 83 0F 90 00
 	SIM Vodafone 64k
 
@@ -344,6 +377,7 @@
 
 3B 3F 95 00 80 69 AF 03 0F 02 80 FF FF 06 0E 83 3E 9F 16
 	AT&T Wireless GSM SIM Card
+	UK Virgin Mobile GSM SIM
 
 3B 57 18 02 93 02 01 01 01 90 00
 	Easyflex FastOS 2.0 / Schlumberger
@@ -363,8 +397,15 @@
 3B 65 00 00 29 05 01 02 01
 	ActivCard (Schlumberger) CyberFlex 64K V1 SM 2.1
 
+3B 65 00 00 41 56 49 4F 4E
+	RBC (Royal Bank of Canada) Avion Visa
+
+3B 65 00 00 43 04 6C 90 00
+	Carte Bancaire (French banking card) (hot reset)
+
 3B 65 00 00 58 01 01 00 80
 	RBS Advanta Platinum Reserve Master Card
+	UK Lloyds TSB Visa Debit (issued 2003, Gemplus)
 
 3B 65 00 00 9C 02 02 07 02
 	US Department of Defense, TEST Common Access Card (CAC)
@@ -420,11 +461,17 @@
 	Belgium Keytrade Bank
 	Belgium Post Bank
 
+3B 67 00 00 85 22 16 31 78 90 00
+	Swiss UBS Ebanking Chipcard
+
 3B 67 00 00 9C 10 01 01 03 FF 07
 	Schlumberger Cyberflex Palmera Protect
 
 3B 67 00 00 A5 20 40 10 1F 90 00
 	Swedish eLegitimation (eID) from Nordea Bank http://www.elegitimation.se/
+
+3B 67 00 00 C1 30 40 01 0B 90 00
+	MC/Maestro card issued by Czech's "Ceskoslovenska obchodni banka"
 
 3B 67 25 00 2A 20 00 4[0,5] 68 90 00
 	Swedish cashcard (proton)
@@ -432,11 +479,17 @@
 3B 67 25 00 62 24 33 03 ..
 	Bull TB1000 ? (SAM for ATM in Luxemburg)
 
+3B 68 00 00 00 73 C8 40 00 00 90 00
+	Barclaycard Visa Wave & Pay - Chip I/F
+
 3B 68 00 00 56 53 44 43 4C 43 31 30
 	VISA (Estonian), made by www.trueb.ch
 
 3B 68 00 00 80 66 45 46 01 38 18 03
 	FNMT WG108k
+
+3B 68 00 00 80 66 A2 06 01 01 64 00
+	Visa card issued by Czech's "Komercni banka" (Gemplus brand on chip)
 
 3B 68 00 00 80 66 A2 06 02 01 32 0E
 	Gemplus GemClub 1K
@@ -477,6 +530,12 @@
 	VISA credit card (Ceska Sporitelna)
 	Maestro credit card (Ceska Sporitelna)
 
+3B 69 00 FF 00 64 4A 10 04 32 05 90 00
+	NXP JCOP 20 V2.1 16K
+
+3B 69 00 FF 4A 43 4F 50 33 31 56 32 32
+	JCOP 31 v22 72K - S/C I/F
+
 3B 69 00 FF 53 6D 40 72 74 43 61 66 65
 	G&D (Giesecke&Devrient) Sm@rtCafé
 
@@ -490,6 +549,8 @@
 	Danish Visa/Dankort
 	UK MBNA MasterCard
 	Visa Card - Worldcard - YapıKredi / Turkey
+	VISA - Lloyds TSB DEBIT
+	UK Halifax Visa Debit
 
 3B 6A 00 FF 41 42 43 44 32 45 46 47 48 49
 	Austria card - JCOP 31/36K
@@ -522,6 +583,9 @@
 3B 6C 00 00 10 10 10 30 00 00 00 00 00 00 00 00
 	Datacard Group Aptura Development Card V1.1b
 
+3B 6C 00 02 36 61 86 38 4B 8C 13 04 62 03 59 8A
+	Nagravision, Swiss mode
+
 3B 6D 00 00 00 31 C0 71 D6 64 11 22 33 01 83 90 00
 	Egg (bank) VISA
 	First Direct (bank) Maestro card
@@ -551,6 +615,16 @@
 	UK Nationwide Bank Visa Delta
 	UK First Direct Maestro
 	UK Halifax Platinum Visa
+	UK Co-operative Bank Visa Debit (produced 2003-2004)
+
+3B 6D 00 00 00 31 80 64 2D A0 04 0C 71 96 8C 61 29
+	UK Co-operative Bank Visa Debit (produced 2002)
+
+3B 6D 00 00 00 31 80 71 96 64 33 D1 01 00 82 90 00
+	DeLaRue GalactIC JavaCard
+
+3B 6D 00 00 00 31 C0 71 D6 65 11 22 33 01 83 90 00
+	UK Co-operative Bank Visa Debit (produced 2006)
 
 3B 6D 00 00 80 31 80 65 B0 06 01 01 77 83 00 90 00
 	GemXpresso Lite: with EMV application
@@ -563,6 +637,9 @@
 
 3B 6D 00 FF 00 31 80 71 8E 64 48 D5 02 00 82 90 00
 	Blue for Business, American Express@Business
+
+3B 6D 00 FF 80 65 53 43 01 0D 06 73 94 21 1B 81 0[1,5]
+	Giesecke & Devrient CardToken 350 (ICCD)
 
 3B 6E 00 00 00 31 80 71 86 65 01 64 02 22 32 80 90 00
 	MasterCard Card - bonus plus (paypass) - Garanti Bank / Turkey
@@ -581,6 +658,10 @@
 	MasterCard Card - Maximum - IS Bank / Turkey
 	Visa Card - Axess - Akbank / Turkey
 
+3B 6E 00 00 00 31 C0 65 76 B4 01 01 60 71 D6 8C 61 1F
+	MasterCard Silver from Viseca Card Services SA
+	http://www.viseca.ch/html/en/kreditkarten/produkte_neutrale_karten.php
+
 3B 6E 00 00 00 31 C0 65 77 B2 01 03 47 71 D6 8C 61 31
 	UK Barclaycard Business VISA
 
@@ -590,6 +671,7 @@
 3B 6E 00 00 00 31 C0 71 86 65 01 64 02 22 33 83 90 00
 	UK NatWest ServiceCard 100 Maestro
 	Visa Card - bonus - Garanti Bank / Turkey
+	UK Royal Bank of Scotland Highline Maestro Debit
 
 3B 6E 00 00 00 31 C0 71 86 65 01 78 01 27 34 83 90 00
 	UK NatWest ServiceCard 100 Maestro
@@ -601,13 +683,16 @@
 
 3B 6E 00 00 00 31 C0 71 D6 65 7D E4 01 10 A0 83 90 00
 	VISA card, issued by the ANWB, the Dutch national Automobile club
-	Visa Card - Maximum - Oyak Bank / Turkey
+	VISA Card - Maximum - Oyak Bank / Turkey
+	VISA - Barclays Premier
 
 3B 6E 00 00 00 31 C0 71 D6 65 7D E4 01 11 A0 83 90 00
 	UK CapitalOne Platinum Mastercard
 
 3B 6E 00 00 00 31 C0 71 D6 65 A3 03 01 80 00 83 90 00
 	UK First Direct (HSBC) Maestro / Cirrus
+	UK Capital One Platinum MasterCard
+	HSBC Commercial Card Visa
 
 3B 6E 00 00 00 62 .. 43 57 41 56 41 4E 54 10 81 90 00
 	Setec SetCOS 4.3.0
@@ -617,6 +702,9 @@
 
 3B 6E 00 00 45 73 74 45 49 44 20 76 65 72 20 31 2E 30
 	Estonian Identity Card (EstEID v1.5 multos)
+
+3B 6E 00 00 80 25 A0 00 00 00 28 56 80 10 24 00 01 11
+	Opencard, new card in Prague, Czech Republic (transport card)
 
 3B 6E 00 00 80 31 80 65 B0 03 01 01 5E 83 00 00 90 00
 	FirstUSA Visa
@@ -648,6 +736,9 @@
 3B 6F 00 00 80 31 E0 5B 59 54 4C 00 00 00 00 00 00 02 00
 	Turkish Armed Force - Daily Social Facility Usage Card
 
+3B 6F 00 00 80 31 E0 6B 01 03 05 02 E0 55 55 55 55 55 55
+	American Express Gold Credit Card
+
 3B 6F 00 00 80 31 E0 6B 04 03 03 04 05 55 55 55 55 55 55
 	Blue American Express Card
 
@@ -669,6 +760,9 @@
 	Norsk Tipping online player card <http://www.norsk-tipping.no/>
 	Norwegian government controlled betting company
 
+3B 6F 00 00 80 31 E0 6B 05 08 05 02 83 55 55 55 55 55 55
+	Bank of Montreal debit card
+
 3B 6F 00 00 80 31 E0 6B 84 06 03 04 31 55 55 55 55 55 55
 	Multos Developer Sample
 
@@ -681,9 +775,17 @@
 3B 6F 00 00 80 31 E0 6B 84 20 05 02 42 55 55 55 55 55 55
 	Multos 14Dc(6-0-13) 64K Dual-Interface Developer Card
 
+3B 6F 00 00 80 5A 08 06 08 20 02 23 92 16 D1 BD 82 90 00
+	"OPUS Card" Montreal's transit system by oberthur cardsystems
+
 3B 6F 00 00 80 5A .. 0[1-5] .. .. .. .. .. .. .. .. 82 90 00
 	Card supporting a Calypso application Rev 1
 	Typically: French "Navigo" transport card
+
+3B 6F 00 00 80 5A 29 13 09 10 11 33 .. .. .. .. 82 90 00
+	MOBIB (reseau transport en commun Bruxelles (Belgique)
+	http://www.uclouvain.be/sites/security/mobib.html
+	Calypso application similar to French NAVIGO
 
 3B 6F 00 00 80 5A 08 03 03 00 00 00 01 56 64 F6 82 90 00
 	carte transport bus/tram "atout.tag" semitag grenoble
@@ -729,6 +831,9 @@
 3B 76 98 00 00 00 9C 11 01 01 02
 	CyberFlex Access 32
 
+3B 78 12 00 00 A0 C4 06 00 8F F1 90 00
+	Cryptoworks/Nagravision decoding card
+
 3B 7A 11 00 02 48 4F 53 54 06 03 19 02 90 00
 	Swedish bankcard with Mastercard from ICA-banken
 
@@ -743,6 +848,9 @@
 
 3B 7B 18 00 00 00 31 C0 64 77 E3 03 00 82 90 00
 	Oberthur Cosmopolic 64K v5.2 D
+
+3B 7B 18 00 00 00 31 C0 64 77 E9 10 00 01 90 00
+	Oberthur Card Systems: Cosmo 64 RSA V5.4 (ISK Key Set: 404142 .. 4E4F)
 
 3B 7B 94 00 00 80 62 11 51 56 46 69 6E 45 49 44
 	Finnish Electronic ID card (fineid card www.fineid.fi)
@@ -772,11 +880,16 @@
 	Gem e-Seal
 	(GemSafeXpresso 32k R3.2?)
 
+3B 7D 94 00 00 57 44 53 63 96 86 93 00 9D F7 10 00 9D
+	China Mobile SIM card
+
 3B 7D 94 00 00 80 31 80 65 B0 83 01 01 90 83 00 90 00
 	GemSafeXpresso 16k R3.2
 
 3B 7D 94 00 00 80 31 80 65 B0 83 02 04 7E 83 00 90 00
 	GXP Pro R3.2 64K, GemSafe applet MPCOS v1.11
+	card issued by Czech National Bank
+	dual card: chip used for electronic certificates (czech commercial bank use such card to sign money transfer orders sent to national clearing central)
 
 3B 7D 94 00 00 80 31 80 65 B0 83 11 00 AC 83 00 90 00
 	GemCombiXpresso R4 72K
@@ -788,11 +901,23 @@
 	Gemalto's Classic TPC HM CC Mifare 1K White PVC
 	(Old name GemSafeXpresso 64K)
 
+3B 7D 95 00 00 80 31 80 65 B0 83 11 C0 A9 83 00 90 00
+	Portuguese identity card
+	http://www.cartaodecidadao.pt
+
+3B 7D 96 00 00 80 31 80 65 B0 83 11 13 AC 83 00 90 00
+	CAC card (GEMALTO GCX4 72K DI)
+
 3B 7D 96 00 00 80 31 80 65 B0 83 11 40 AC 83 00 90 00
 	GemXpresso R4 64k
 
 3B 7D 96 00 00 80 31 80 65 B0 83 11 C0 A9 83 00 90 00
 	Gemplus X-Presso Pro 64k
+
+3B 7D 96 00 00 80 31 80 65 B0 83 11 C0 C8 83 00 90 00
+	TOP IM GX4 from Gemalto (was GemXpresso R4)
+	Java Card 2.2.1
+	Global Platform 2.1.1 (amendment A)
 
 3B 7D 96 00 00 80 31 80 65 B0 93 11 D0 A9 83 00 90 00
 	Gemalto Classic TPC (Trusted PKI Card) IM
@@ -810,6 +935,10 @@
 
 3B 7E 13 00 00 00 6A 11 63 54 05 48 .. .. .. 01 22 90 00
 	Sagem Windows for smart cards
+
+3B 7E 94 00 00 80 25 A0 00 00 00 28 56 80 10 24 00 01 11
+	"OpenCard" - card issued by Prague local authority
+	dual card: chip used for electronic certificates
 
 3B 7F 13 00 FF 45 43 4F 53 76 31 31 30 28 63 29 50 46 42 4D
 	ECOS-Card [Experimental Card Operating System V.1.1] by Philipp Maier
@@ -830,6 +959,9 @@
 
 3B 7F 38 00 00 00 6A 43 45 52 45 53 02 2C 34 02 02 03 90 00
 	WG10
+
+3B 7F 38 00 00 00 6A 43 45 52 45 53 02 2C 34 03 10 03 90 00
+	Used card Aragón governement (Aragón - España)
 
 3B 7F 38 00 00 00 6A 44 4E 49 65 [1,2]0 02 4C 34 01 13 03 90 00
 	DNI electronico (Spanish electronic ID card)
@@ -881,6 +1013,13 @@
 3B 85 40 FE 68 01 01 02 04
 	Axalto CryptoFlex 8K
 
+3B 85 80 01 4A 4D 52 54 44 41
+	JMRTD - Java Machine Readable Travel Document (ePassport emulator - http://jmrtd.org/)
+
+3B 86 80 01 06 75 77 81 02 80 00
+	"OpenCard" - card issued by Prague local authority
+	dual card: RFID (1k Mirfare) used for parkimeters and as public traffic ticket
+	
 3B 86 80 01 4A 43 4F 50 33 30 12
 	Mifare ProX T=CL
 
@@ -889,6 +1028,15 @@
 
 3B 87 81 31 40 43 4D 46 43 20 31 33 31 6F
 	Telekom Paycard
+
+3B 88 80 01 00 73 C8 40 00 00 90 00 62
+	NXP JCOP 31 V2.2 36K - RFID I/F
+	Barclaycard Visa Wave & Pay - RFID I/F
+
+3B 88 80 01 00 73 C8 40 13 00 90 00 71
+	Nokia 6131 NFC phone
+	http://wiki.forum.nokia.com/index.php/Nokia_6131_NFC_-_FAQs
+	Giesecke & Devrient’s (G&D) Sm@rtCafé Expert 3.1
 
 3B 88 81 31 20 55 00 57 69 6E 43 61 72 64 29
 	SmartCard for Windows 1.0
@@ -906,6 +1054,9 @@
 3B 89 80 01 00 64 04 15 01 02 00 90 00 EE
 	German Passport (issued Apr 2007)
 
+3B 89 80 01 4A 43 4F 50 33 31 56 32 32 4A
+	JCOP 31 v22 72K (with Mifare 1K emulation) - RFID I/F
+
 3B 89 80 01 4A 43 4F 50 34 31 56 32 32 4D
 	New Zealand e-Passport
 
@@ -915,6 +1066,9 @@
 
 3B 89 80 01 53 50 4B 32 35 44 49 90 00 DA
 	SPK 2.5 D1
+
+3B 89 80 01 80 67 04 12 B0 03 05 01 02 4C
+	Austrian Passport
 
 3B 8A 80 01 00 64 05 5C 02 03 31 80 90 00 16
 	T-System Contactless Netkey Card
@@ -944,6 +1098,9 @@
 3B 8A 00 92 02 03 91 08 00 01 01 04 00
 	32K SIM Card from the austrian telecom "ONE"
 
+3B 8C 80 01 50 01 BA 13 7E 00 00 00 00 B3 71 71 38
+	Mobib (Brussels public transportation card)
+
 3B 8E 80 01 80 31 80 66 40 90 89 12 08 02 83 01 90 00 0B
 	ISO 14443B Type T = CL Infineon Card
 
@@ -953,16 +1110,27 @@
 3B 8F 01 80 25 A0 00 00 00 56 57 44 4B 34 30 30 06 00 B7
 	SafeNet IKey4000
 
+3B 8F 80 01 52 46 49 44 49 4F 74 20 4A 43 4F 50 20 33 36 76
+	RFIDIOt JCOP 36K Blank (http://rfidiot.org)
+
+3B 8F 80 01 52 46 49 44 49 4F 74 20 4A 43 4F 50 20 37 32 76
+	RFIDIOt JCOP 72K Blank (http://rfidiot.org)
+
 3B 8F 80 01 80 4F 0C A0 00 00 03 06 03 00 01 00 00 00 00 6A
 	Philips MIFARE Standard (1 Kbytes EEPROM)
 	http://www.nxp.com/products/identification/mifare/classic/
 	RFID - ISO 14443 Type A - Transport for London Oyster
+	ACOS5/1k Mirfare
 
 3B 8F 80 01 80 4F 0C A0 00 00 03 06 03 00 02 00 00 00 00 69
 	Mifare card with 4k EEPROM
 
 3B 8F 80 01 80 4F 0C A0 00 00 03 06 03 00 03 00 00 00 00 68
 	Contactless Mifare Ultralight
+
+3B 8F 80 01 80 4F 0C A0 00 00 03 06 03 FF 88 00 00 00 00 1C
+	Infineon Mifare SLE 66R35
+	http://www.infineon.com/cms/en/product/channel.html?channel=ff80808112ab681d0112ab69686e01ee
 
 3B 8F 80 01 80 4F 0C A0 00 00 03 06 0B 00 00 00 00 00 00 63
 	RFID - ISO 15693 - EM Microelectronic-Marin SA
@@ -1011,6 +1179,9 @@
 3B 95 95 40 FF D0 00 31 01 01
 	Cyberflex Access E-gate V3
 
+3B 95 95 40 FF D0 00 54 01 31
+	Portuguese identity card, http://www.cartaodecidadao.pt
+
 3B 96 18 80 01 80 51 00 61 10 30 9F 00 61 10 30 9E
 	Atmel/Athena T0 PC/SC Compliance Test Card No. 1 (warm reset)
 
@@ -1028,6 +1199,9 @@
 
 3B 9A 94 00 91 01 00 17 00 01 23 11 00 96
 	GSM-SIM Card T-D1 (900MHz)
+
+3B 9A 94 00 91 01 00 17 00 01 26 06 00 96
+	T D1 GSM card
 
 3B 99 94 00 91 99 93 12 00 01 16 02 00
 	ORGA test systems - GSM Phase 2+ Test SIM
@@ -1053,6 +1227,9 @@
 3B 9D 94 40 23 00 68 20 01 4D 69 6F 43 4F 53 00 90 00
 	Miotec (http://www.miotec.fi) smartcard running Miocos 2.0 on an Atmel AT90SC646
 
+3B 9E 94 80 1F C3 80 31 E0 73 FE 21 1B 66 D0 00 17 B4 00 00 A5
+	Vodafone Ireland SIM card
+
 3B 9E 95 80 1F C3 80 31 A0 73 BE 21 13 67 29 02 01 04 04 CD 39
 	Hutchison/3 3G USIM
 	J+ SWIM WIB UMTS SIM Test card
@@ -1060,6 +1237,18 @@
 
 3B 9D 95 80 1F C3 80 31 E0 52 4B 54 62 11 03 73 FE 21 1B 8F
 	KT WiBro UICC (2.3 GHz mobile WiMAX in South Korea)
+
+3B 9D 95 80 1F C3 80 31 E0 73 FE 21 1B 65 D0 00 57 02 62 30
+	Gemalto NFC enabled (acquired through the Simagine contest)
+
+3B 9D 95 80 1F C3 80 63 AF 03 A0 73 1A 21 1B 83 0F 90 00 F4
+	Greece TIM GSM SIM
+
+3B 9D 95 80 1F C3 80 73 1A 21 1B 63 AF 07 A7 83 0F 90 00 F7
+	GemXplore 3G
+
+3B 9F 11 C0 0A 1F C7 80 31 E0 73 FE 21 1B 63 F1 00 AD 83 0F 90 00 59
+	GemXplore Generation 3G
 
 3B 9F 21 0E 49 52 44 45 54 4F 20 41 43 53 20 56 34 2E 31 9D
 	Foxtel paytv decoder in Australia acs 4.1 Irdeto2
@@ -1069,6 +1258,7 @@
 
 3B 9E 95 80 1F C7 80 31 E0 73 FE 21 1B 66 D0 00 07 00 1E 00 1A
 	3 ireland http://www.three.ie
+	UK '3' network GSM-3G SIM
 
 3B 9F 94 40 1E 00 67 11 43 46 49 53 45 10 52 66 FF 81 90 00
 	Setec / FINEID
@@ -1097,6 +1287,10 @@
 
 3B 9F 95 80 1F C7 80 31 E0 73 FE 21 1B 63 E2 04 A5 83 0F 90 00 88
 	Cingular "64Ksmartchip" GSM SIM
+	Telia GSM/3G (Swedish operator)
+
+3B 9F 95 80 1F C7 80 31 E0 73 FE 21 1B 63 E2 08 A8 83 0F 90 00 89
+	Tre (Swedish operator)
 
 3B 9F 96 80 1F C3 00 68 10 44 05 01 46 49 53 45 31 C8 07 90 00 1A
 	SETEC SetCard 32K PKI Evaluated SetCOS 4.4.1
@@ -1107,6 +1301,9 @@
 
 3B 9F 96 80 1F C7 80 31 E0 73 FE 21 1B 63 E2 03 94 83 0F 90 00 BD
 	USIM (3G DF) Orange
+
+3B 9F 96 80 1F C7 80 31 E0 73 FE 21 1B B3 E2 03 94 83 0F 90 00 6D
+	GemXplore 3G v2.2
 
 3B A7 00 40 .. 80 65 A2 08 .. .. ..
 	Gemplus GemSAFE Smart Card (8K)
@@ -1143,6 +1340,12 @@
 3B AB 00 81 31 40 45 80 31 C0 65 08 06 80 00 00 00 00 84
 	Reloadable Visa Cash card (Schlumberger), Bank of America
 
+3B AC 00 40 2A 00 12 25 00 64 80 00 03 10 00 90 00
+	Sesam Vitale card CPS (Carte Profesionnel de Santé)
+
+3B AC 00 40 2A 00 12 25 00 64 80 82 02 12 00 90 00
+	Sesam Vitale card CPS (Carte Profesionnel de Santé)
+	
 3B AD 00 40 FF 80 31 80 65 B0 05 01 01 5E 83 00 90 00
 	Dallas Semiconductor iButton
 	JIB
@@ -1233,6 +1436,9 @@
 
 3B BA 94 00 40 14
 	GG3RS732S0 ?
+
+3B BA 94 00 40 14 47 47 33 52 53 37 31 36 53 20
+	GSM SIM Elisa Estonia
 
 3B BA 94 00 40 14 47 47 33 52 53 37 31 36 53 30
 	GSM-SIM Viag Interkom E2 Loop (1800MHz)
@@ -1327,6 +1533,11 @@
 
 3B BE 18 00 00 41 05 10 00 00 00 00 00 00 00 00 00 90 00
 	ACS ACOS5 "ACOS5-32-G" http://www.acs.com.hk/acos5.asp
+	dual card
+
+3B BE 96 00 00 41 03 00 00 00 00 00 00 00 00 00 02 90 00
+	SAM inside the Tikitag reader from Alcatel-Lucent
+	http://hackerati.com/post/57314994/rfid-on-the-cheap-hacking-tikitag
 
 3B BD 18 00 81 31 FE 45 80 51 02 67 04 14 B1 01 01 02 00 81 05 3D
 	Austrian "e-Card" (=Health Card), BRANDNEW (since 06/2005)
@@ -1381,6 +1592,9 @@
 
 3B DB 96 00 81 B1 FE 45 1F 03 80 F9 A0 00 00 03 08 00 00 10 00 18
 	Oberthur CS PIV End Point v1.08 FIPS201 Certified
+
+3B DB 96 00 81 B1 FE 45 1F 03 80 F9 A0 00 00 03 48 00 00 00 01 49
+	Fly Clear card
 
 3B DE 18 FF 81 F1 FB 34 00 1F 07 44 45 53 46 69 72 65 53 41 4D 56 31 2E 30 D2
 	Mifare Desfire SAM Module
@@ -1459,6 +1673,9 @@
 3B E9 00 00 81 31 FE 45 45 4D 56 20 30 33 20 20 06 99
 	Visa credit card
 
+3B E9 00 FF C1 10 31 FE 55 00 64 05 00 C8 02 31 80 00 47
+	Identity card of Italian Republic
+
 3B E9 00 FF C1 10 31 FE 55 C8 01 20 50 4E 34 30 31 32 AD
 	Siemens CardOS/M 3.0 (SLE66CX160S)
 
@@ -1502,6 +1719,12 @@
 
 3B EF 00 00 81 31 FC 45 80 31 80 65 11 01 13 00 01 53 41 43 45 81 04 21
 	Slovenska sporitelna (SLSP) Bank card, Maestro Card with chip
+
+3B EF 00 00 81 31 FC 45 80 31 80 65 11 11 23 10 02 53 41 43 45 81 04 12
+	VISA card issued by UBS, Switzerland
+
+3B EF 00 00 81 31 FE 45 43 4D 42 5F 43 6F 6D 53 44 41 30 30 34 30 00 E4
+	VISA (Danske Bank Eesti / www.sampopank.ee)
 
 3B EF 00 00 81 31 FE 65 00 5C 50 43 53 D1 91 47 D2 76 00 00 38 33 00 70
 	Siemens/Infineon Sicrypt S26381-F252-V1 GS:03
@@ -1578,6 +1801,12 @@
 3B EF 00 FF 81 31 FE 45 80 31 C0 6B 49 42 4D 20 4A 65 74 5A 20 4D 32 39
 	UBS Internet Card (IBM JetZ M2)
 
+3B EF 00 FF 81 31 FF 65 49 42 4D 20 4D 46 43 39 32 32 39 32 38 39 30 17
+	IBM MFC 4.22 (University of Cambridge smartchip card)
+
+3B F0 12 00 FF 91 81 B1 7C 45 1F 03 99
+	Japanese Chijou Digital B-CAS Card (pay TV)
+
 3B F2 18 00 02 C1 0A 31 FE 55 C8 07 76
 	Siemens CardOS V4.3
 
@@ -1645,6 +1874,9 @@
 3B F7 11 00 01 40 96 58 42 14 0E 6C B6 D6
 	UK on digital (terrestrial digital TV card)
 
+3B F7 11 00 01 40 96 70 70 0A 0E 6C B6 D6
+	TopUp TV NagraVision viewing card
+
 3B F7 11 00 01 40 96 70 70 37 0E 6C B6 D6
 	Carte pour decodeur cable numérique (fourni par www.voo.be et
 	www.ledecodeur.be)
@@ -1669,8 +1901,14 @@
 3B F7 91 00 FF 91 81 71 FE 40 00 41 20 00 11 77 81 80 40
 	Contactless Mifare DESFire
 
+3B F8 18 00 00 81 31 FE 45 00 73 C8 40 00 00 90 00 80
+	NXP JCOP 31 V2.2 36K - S/C I/F
+
 3B F8 18 00 00 81 31 FE 45 00 73 C8 40 13 00 90 00 93
 	Giesecke & Devrient Sm@rtCafé Expert 3.0
+
+3B F9 18 00 00 81 31 FE 45 4A 43 4F 50 32 31 56 32 32 A9 
+	NXP JCOP 21 V2.2 36K
 
 3B F9 18 00 00 81 31 FE 45 4A 43 4F 50 33 31 56 32 32 A8
 	JCOP31 / 72B1 V2.2
@@ -1682,6 +1920,9 @@
 3B FA 11 00 02 40 60 43 C6 02 F8 03 03 00 00 90 00
 	DeLaRue DX(?)
 
+3B FA 13 00 00 81 31 FE 45 4A 43 4F 50 32 31 56 32 33 31 91
+	NXP JCOP 21 V2.3.1 36K
+
 3B FA 13 00 00 81 31 FE 45 4A 43 4F 50 34 31 56
 	JCOP41 V221
 
@@ -1690,6 +1931,9 @@
 
 3B FA 18 00 00 81 31 FE 45 4A 43 4F 50 34 31 56 32 32 31 9D
 	NXP JCOP 41 v2.2.1 72k SmartCard I/F
+
+3B FA 18 00 FF 81 31 FE 45 4A 43 4F 50 32 31 56 32 33 31 65 
+	TrubDemax healthcare card
 
 3B FA 18 00 FF 81 31 FE 45 4A 43 4F 50 34 31 56 32 32 31 62
 	JCOP41
@@ -1706,6 +1950,13 @@
 
 3B FA 98 00 FF C1 10 31 FE 55 C8 04 53 41 47 5F 50 4B 49 32 70
 	Siemens Corporate Card (Belgium , Germany)
+
+3B FB 11 00 00 40 78 80 59 53 50 59 52 55 53 AE 02 02
+	Rosetta® Series II Smart Card manufactured by Spyrus
+	http://spyrus.com/products/rosetta_smart_usb.asp
+
+3B FB 11 00 00 81 31 FE 45 00 31 C0 64 77 E9 10 00 00 90 00 6A
+	OCS ID-One Cosmo Card USB Token
 
 3B FB 13 00 FF 81 31 80 75 5A 43 36 2E 35 20 52 45 56 20 43 64
 	ZeitControl BasicCard 6.5, multiapplication with 30 kByte EEPROM
@@ -1743,6 +1994,10 @@
 3B FD 18 00 00 80 31 FE 45 00 31 80 71 8E 64 52 D9 04 00 81 90 00 5B
 	Oberthur Card Systems, authentIC
 
+3B FD 18 00 FF 80 B1 FE 45 1F 07 80 73 00 21 13 57 4A 54 48 61 31 47 00 5F
+	Activkey Sim
+	http://www.actividentity.com/products/activkey_usb_tokens__home.php
+
 3B FD 94 00 00 81 31 20 43 80 31 80 65 B0 83 02 04 7E 83 00 90 00 B6
 	GXPPRo-R3.x STD PTS T=1
 
@@ -1751,6 +2006,10 @@
 
 3B FE 91 00 FF 91 81 71 FE 40 00 41 28 00 01 80 81 00 73 C8 40 00 00 90 00 4D
 	Philips SmartMX chip (IBMs JCOP OS)
+
+3B FE 91 00 FF 91 81 71 FE 40 00 41 28 00 11 33 B0 4A 43 4F 50 33 31 56 32 C4
+	JCOP31 72K
+	dual interface functionality, 1K Mifare emulation.
 
 3B FE 94 00 FF 80 B1 FA 45 1F 03 45 73 74 45 49 44 20 76 65 72 20 31 2E 30 43
 	Estonian Identity Card (EstEID v1.0 cold)
@@ -1792,6 +2051,10 @@
 3B FF 18 00 00 81 31 FE 45 00 6B 04 05 01 00 01 11 01 43 4E 53 10 31 80 69
 	Sanitary Card of "Friuli Venezia Giulia" region (Italian Republic)
 	Carta Nazionale dei Servizi (Italia) http://cartaservizi.regione.fvg.it/
+
+3B FF 18 00 00 81 31 FE 45 00 6B 04 05 01 00 01 21 01 43 4E 53 10 31 80 59
+	CNS - Carta Nazionale dei Servizi (Italia)
+	PA emittente: Regione Autonoma della Sardegna
 
 3B FF 18 00 FF 80 31 FE 45 53 46 53 45 2D 43 58 33 32 32 2D 56 18 03 08 7C
 	Giesecke & Devrient Sm@rtCafé Expert 2.0
@@ -1924,6 +2187,9 @@
 3B FF 18 00 FF 81 31 FE 55 00 6B 02 09 02 00 01 11 01 43 4E 53 11 31 80 8E
 	Infocamere CNS
 
+3B FF 18 00 FF 81 31 FE 55 00 6B 02 09 03 03 01 11 01 43 4E 53 11 31 80 8C
+	Universita' Degli Studi di Torino (Infocert)
+
 3B FF 18 00 FF C1 0A 31 FE 55 00 6B 05 08 C8 05 01 11 01 43 4E 53 10 31 80 0C
 	Carta Regionale dei Servizi - Regione Lombardia
 
@@ -1946,6 +2212,9 @@
 
 3B FF 95 00 FF 40 0A 80 31 E8 73 F6 21 13 67 4A 47 48 60 31 42 00
 	Giesecke & Devrient STARSIM
+
+3B FF 96 00 FF 81 31 FE 45 65 63 0D 09 71 07 64 00 0D 00 03 54 50 07 01 81
+	Commerzbank ServiceCard / Maestro / GeldKarte / Cirrus / girocard / CashGroup / electronic cash
 
 3B FF 96 00 FF C0 0A 1F 43 80 31 E0 73 36 21 13 57 4A 43 49 1C 31 30 32 1E
 	Giesecke & Devrient - UniverSIM Pegasus
@@ -1991,6 +2260,9 @@
 3F 65 25 .. .. 04 6C 90 .0
 	Carte Bancaire (French banking card)
 
+3F 65 25 00 A4 09 6A 90 00
+	Sesam Vitale (French health card)
+	
 3F 65 25 00 2[2,C] 09 [F,6]9 90 00
 	Sesam Vitale (French health card)
 
@@ -2072,6 +2344,9 @@
 3F 78 12 25 01 40 B0 03 4A 50 20 48 55
 	DSS/DTV H
 
+3F 78 13 25 03 40 B0 20 FF FF 4A 50 00
+	DSS/DTV P4
+
 3F 7E 11 25 05 40 B0 08 00 00 4D 59 00 00 00 53 4B 0B 07
 	BSkyB Series 11 (DSS satellite TV card)
 
@@ -2093,8 +2368,11 @@
 3F 7F 13 25 03 40 B0 0B 69 4C 4A 50 C0 00 00 53 59 00 00 00
 	Sky Digital (DSS satellite TV card)
 
-3F 78 13 25 03 40 B0 20 FF FF 4A 50 00
-	DSS/DTV P4
+3F FD 13 25 02 50 80 0F 33 B0 13 69 FF 4A 50 D0 80 00 49 54 03
+	Sky Italia (satellite card, NDS3)
+
+3F FF 13 25 03 10 80 33 B0 0E 69 FF 4A 50 70 00 00 49 54 02 00 00
+	Sky entitlement card
 
 3F FF 14 25 03 10 80 33 B0 10 69 FF 4A 50 70 00 00 5A 45 01 00 00
 	Norweigan DVB-C provider Get (www.get.no). NDS Videoguard security card.
@@ -2120,7 +2398,13 @@
 3F FF 95 00 FF 91 81 71 FE 47 00 44 4E 41 53 50 31 31 30 20 52 65 76 41 30 31 14
 	TVA Digital - Nagra Vision ID TV-01
 
+3F FF 95 00 FF 91 81 71 FE 47 00 44 4E 41 53 50 31 31 30 20 52 65 76 41 32 32 15
+	UM01 card from German Unitymedia cable TV provider
+
 3F FF 95 00 FF 91 81 71 FE 47 00 44 4E 41 53 50 31 31 30 20 52 65 76 41 43 33 65
 	Brazilian NET Digital (Cable TV provider) - Nagra Vision "NASP110 RevA01"
+
+3F FF 95 00 FF 91 81 71 FF 47 00 4E 43 4D 45 44 30 30 34 20 52 65 76 34 30 31 6D
+	Italian Mediaset Premium pay per view encrypted digital video broadcasting smartcard
 
 # do not delete
