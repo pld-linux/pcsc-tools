@@ -7,7 +7,7 @@ Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
 Version:	1.4.16
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
@@ -15,13 +15,15 @@ Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}
 # broken builder script, original url:
 # http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 Source1:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
-# NoSource1-md5:	
+# NoSource1-md5:	1b286988f4c376e4d86aea124eedad08
+Patch0:		%{name}-update.patch
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
-BuildRequires:	pcsc-lite-devel
+BuildRequires:	pcsc-lite-devel >= 1.6.0
 BuildRequires:	perl-PCSC >= 1.2.0
 %{?with_gtk:BuildRequires:	perl-Gtk2}
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
+Requires:	pcsc-lite-libs >= 1.6.0
 Requires:	perl-PCSC >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,6 +37,7 @@ Narzędzia do używania z czytnikami Smart Card i PC/SC.
 Summary:	Some tools for smart cards and PC/SC with GTK+ GUI
 Summary(pl.UTF-8):	Narzędzia dla czytników Smart Card i PC/SC z GUI w GTK+
 Group:		X11/Applications
+Requires:	perl-PCSC >= 1.2.0
 
 %description gtk
 Some tools for smart cards and PC/SC with GTK+ GUI.
@@ -44,6 +47,7 @@ Narzędzia dla czytników Smart Card i PC/SC z GUI w GTK+.
 
 %prep
 %setup -q
+%patch0 -p1
 
 # paranoid check whether smartcard_list.txt in _sourcedir isn't too old
 if [ "`wc -l < %{SOURCE1}`" -lt "`wc -l < smartcard_list.txt`" ] ; then
