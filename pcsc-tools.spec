@@ -6,22 +6,23 @@
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
-Version:	1.4.20
+Version:	1.4.21
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
-# Source0-md5:	c85f8b983e4b9a9dcd373725f024c6b8
+# Source0-md5:	c5ec17124aab4e933d537d6253046423
 # broken builder script, original url:
 # http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
-Source1:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
-# NoSource1-md5:	d62a1c6fddcebb792dde4788acbabdb2
+Source1:	smartcard_list.txt
+# NoSource1-md5:	c8ef8c712ee2f5d38210019ee1577eb3
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 BuildRequires:	pcsc-lite-devel >= 1.6.0
 BuildRequires:	perl-PCSC >= 1.2.0
 %{?with_gtk:BuildRequires:	perl-Gtk2}
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
+BuildRequires:	sed >= 4.0
 Requires:	pcsc-lite-libs >= 1.6.0
 Requires:	perl-PCSC >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,6 +54,8 @@ if [ "`wc -l < %{SOURCE1}`" -lt "`wc -l < smartcard_list.txt`" ] ; then
 	exit 1
 fi
 cp -f %{SOURCE1} .
+
+%{__sed} -i -e '1s,/usr/bin/env perl,/usr/bin/perl,' ATR_analysis gscriptor scriptor
 
 %build
 %{__make} \
