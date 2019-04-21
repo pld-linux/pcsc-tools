@@ -6,17 +6,19 @@
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
-Version:	1.4.27
+Version:	1.5.4
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.gz
-# Source0-md5:	8ed881400d89f89cba13e4d70f524fb3
+Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.bz2
+# Source0-md5:	4f4d917f5d3fda88167e2bf78cbd4c3b
 # broken builder script, original url:
 # http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 Source1:	smartcard_list.txt
-# NoSource1-md5:	2d76a38b443ef80f0616903dcd1c1932
+# NoSource1-md5:	19f39f992cc32241a56bb0ba9561a38c
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
+BuildRequires:	autoconf >= 2.69
+BuildRequires:	automake >= 1:1.8
 BuildRequires:	pcsc-lite-devel >= 1.6.0
 BuildRequires:	perl-PCSC >= 1.2.0
 %{?with_gtk:BuildRequires:	perl-Gtk2}
@@ -58,16 +60,20 @@ cp -f %{SOURCE1} .
 %{__sed} -i -e '1s,/usr/bin/env perl,/usr/bin/perl,' ATR_analysis gscriptor scriptor
 
 %build
-%{__make} \
-	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -Wall -DVERSION=\\\"%{version}\\\" -I/usr/include/PCSC"
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure \
+	--disable-silent-rules
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT%{_prefix} \
-	MAN="ATR_analysis.1p gscriptor.1p pcsc_scan.1 scriptor.1p"
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
