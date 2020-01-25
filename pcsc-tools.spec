@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	gtk	# don't build GTK+ tools
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
