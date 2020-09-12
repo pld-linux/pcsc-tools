@@ -5,22 +5,21 @@
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
-Version:	1.5.4
+Version:	1.5.7
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.bz2
-# Source0-md5:	4f4d917f5d3fda88167e2bf78cbd4c3b
+# Source0-md5:	ff06894380e9233a5cc20b843f85c31b
 # broken builder script, original url:
 # http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
 Source1:	smartcard_list.txt
-# NoSource1-md5:	19f39f992cc32241a56bb0ba9561a38c
+# NoSource1-md5:	4aa8c5c315efb557a1cf90df848079fa
 URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.8
 BuildRequires:	pcsc-lite-devel >= 1.6.0
 BuildRequires:	perl-PCSC >= 1.2.0
-%{?with_gtk:BuildRequires:	perl-Gtk2}
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
 BuildRequires:	sed >= 4.0
