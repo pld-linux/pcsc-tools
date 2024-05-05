@@ -5,17 +5,17 @@
 Summary:	Some tools to be used with smart cards and PC/SC
 Summary(pl.UTF-8):	Narzędzia do używania z czytnikami Smart Card i PC/SC
 Name:		pcsc-tools
-Version:	1.5.7
+Version:	1.7.1
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/%{name}-%{version}.tar.bz2
-# Source0-md5:	ff06894380e9233a5cc20b843f85c31b
+Source0:	https://pcsc-tools.apdu.fr/%{name}-%{version}.tar.bz2
+# Source0-md5:	5bc5e648c740720fea640ce5fc287ce5
 # broken builder script, original url:
-# http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt
+# https://pcsc-tools.apdu.fr/smartcard_list.txt
 Source1:	smartcard_list.txt
-# NoSource1-md5:	4aa8c5c315efb557a1cf90df848079fa
-URL:		http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
+# NoSource1-md5:	b053d7168d1da04719cc67b7cd1e4cc8
+URL:		https://pcsc-tools.apdu.fr/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.8
 BuildRequires:	pcsc-lite-devel >= 1.6.0
@@ -37,6 +37,7 @@ Narzędzia do używania z czytnikami Smart Card i PC/SC.
 Summary:	Some tools for smart cards and PC/SC with GTK+ GUI
 Summary(pl.UTF-8):	Narzędzia dla czytników Smart Card i PC/SC z GUI w GTK+
 Group:		X11/Applications
+Requires:	%{name} = %{version}-%{release}
 Requires:	perl-PCSC >= 1.2.0
 
 %description gtk
@@ -55,7 +56,7 @@ if [ "`wc -l < %{SOURCE1}`" -lt "`wc -l < smartcard_list.txt`" ] ; then
 fi
 cp -f %{SOURCE1} .
 
-%{__sed} -i -e '1s,/usr/bin/env perl,/usr/bin/perl,' ATR_analysis gscriptor scriptor
+%{__sed} -i -e '1s,/usr/bin/env perl,/usr/bin/perl,' ATR_analysis.in gscriptor scriptor
 
 %build
 %{__aclocal}
@@ -73,10 +74,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc Changelog README
 %attr(755,root,root) %{_bindir}/ATR_analysis
@@ -92,5 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %files gtk
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gscriptor
+%{_desktopdir}/gscriptor.desktop
+%{_datadir}/pcsc/gscriptor.png
 %{_mandir}/man1/gscriptor.1p*
 %endif
